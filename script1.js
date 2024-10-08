@@ -77,12 +77,10 @@ let decideWinner = (humanScore, computerScore) => {
 };
 
 let playGame = () => {
-  for (let i = 0; i < 5; i++) {
     //inputs
     const cc = getComputerChoice();
     const hc = gethumanChoice();
     playRound(cc, hc);
-  }
   decideWinner(human, comp);
 };
 playGame();
