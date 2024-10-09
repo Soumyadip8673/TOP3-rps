@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock paper scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to rock paper scissors game</h1>
     <!-- developing ui of the rps game  -->
+     <div class="game-window">
+        <div class="heading"><h1>Welcome to Rock Paper Scissors game !!</h1></div>
+        <div class="input-window">
+            <div class="human-input">
+                <h2>Your input here</h2>
+                <div id="hInput"> <img src="assets/bg.jpeg" alt="" class="input-img"></div>
+            </div>
+            <div class="computer-input">
+                <h2>Computer input</h2>
+                <div id="cInput"> <img src="assets/bg.jpeg" alt="" class="input-img"></div>
+            </div>
+        </div>
+        <div class="score-window">
+            <div class="human-score">
+                <h3>Human score: 0</h3>
+            </div>
+            <div class="computer-score">
+                <h3>Computer score: 0</h3>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="rock"><img src="assets/rock.jpeg" alt=""></button>
+            <button class="btn" id="paper"><img src="assets/paper.jpeg" alt=""></button>
+            <button class="btn" id="scissors"><img src="assets/scissors.jpeg" alt=""></button>
+            <button class="btn" id="reset"><img src="assets/reset.png" alt=""></button>
+        </div>
+     </div>
     <script src="script1.js"></script>
 </body>
 </html>

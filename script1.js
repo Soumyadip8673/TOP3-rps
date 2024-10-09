@@ -1,4 +1,8 @@
 console.log("script connected");
+// variables
+//scores
+let human = 0;
+let comp = 0;
 
 let getComputerChoice = () => {
   let ch = Math.floor(0 + Math.random() * 3);
@@ -21,9 +25,7 @@ let gethumanChoice = () => {
   return ch;
 };
 
-//scores
-let human = 0;
-let comp = 0;
+
 
 let playRound = (cc, hc) => {
   if (cc === "rock") {
@@ -76,11 +78,65 @@ let decideWinner = (humanScore, computerScore) => {
   }
 };
 
-let playGame = () => {
-    //inputs
+document.getElementById("rock").addEventListener("click", () => {
+  const hc = "rock";
+  const cc = getComputerChoice();
+  imgForInput(cc,hc)
+  playRound(cc, hc);
+  setScore(human,comp)
+});
+document.getElementById("paper").addEventListener("click", () => {
+  const hc = "paper";
+  const cc = getComputerChoice();
+  imgForInput(cc,hc)
+  playRound(cc, hc);
+  setScore(human,comp)
+});
+document.getElementById("scissors").addEventListener("click", () => {
+    const hc = "scissors";
     const cc = getComputerChoice();
-    const hc = gethumanChoice();
+    imgForInput(cc,hc)
     playRound(cc, hc);
-  decideWinner(human, comp);
-};
-playGame();
+    setScore(human,comp)
+  });
+
+
+  // reset button 
+  document.getElementById('reset').addEventListener('click',()=>{
+    comp=0
+    human=0
+    document.querySelector(".human-score").innerHTML = `<h3>Human score: ${human}</h3>`;
+    document.querySelector(".computer-score").innerHTML = `<h3>Computer score: ${comp}</h3>`;
+     document.querySelector('#hInput').innerHTML=' <img src="assets/bg.jpeg" alt="" class="input-img">'
+    document.querySelector('#cInput').innerHTML=' <img src="assets/bg.jpeg" alt="" class="input-img">'
+  })
+
+
+  // set input image 
+  let imgForInput=(cinput,hinput)=>{
+    if (hinput==='rock') {
+      document.querySelector('#hInput').innerHTML=' <img src="assets/rock.jpeg" alt="" class="input-img">'
+    }
+    else if(hinput==='paper'){
+      document.querySelector('#hInput').innerHTML=' <img src="assets/paper.jpeg" alt="" class="input-img">'
+    }
+    else if(hinput==='scissors'){
+      document.querySelector('#hInput').innerHTML=' <img src="assets/scissors.jpeg" alt="" class="input-img">'
+    }
+    if (cinput==='rock') {
+      document.querySelector('#cInput').innerHTML=' <img src="assets/rock.jpeg" alt="" class="input-img">'
+    }
+    else if(cinput==='paper'){
+      document.querySelector('#cInput').innerHTML=' <img src="assets/paper.jpeg" alt="" class="input-img">'
+    }
+    else if(cinput==='scissors'){
+      document.querySelector('#cInput').innerHTML=' <img src="assets/scissors.jpeg" alt="" class="input-img">'
+    }
+  }
+
+  // set score 
+  let setScore=(human,comp)=>{
+    document.querySelector(".human-score").innerHTML = `<h3>Human score: ${human}</h3>`;
+    document.querySelector(".computer-score").innerHTML = `<h3>Computer score: ${comp}</h3>`;
+  }
+ 

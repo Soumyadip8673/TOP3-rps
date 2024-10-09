@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;  
+    justify-content: center;
+    background-image: url('assets/bg2.jpeg');
+}
+.game-window{
+    background-color: #60461e;
+    margin: 32px;
+    border: 10px solid #3a290e;
+    text-align: center;
+    width: 60vw;
+    height: 650px;
+    color: rgb(214, 208, 208);
+    border-radius: 23px;
+}
+.heading{
+    padding: 16px;
+    margin: 8px;    
+}
+.input-window{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 63px;
+    margin: 8px;
+    gap: 120px;
+    background-color: rgb(51, 49, 49);
+    border-radius: 23px;
+}
+.human-input,.computer-input{
+    height: 230px;
+    padding: 8px;
+    width: 230px;
+}
+#cInput,#hInput{
+    margin: 8px;
+}
+.input-img{
+    height: 190px;
+    width: 220px;
+    border-radius: 8px;
+}
+.score-window{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 185px;
+    margin: 8px;
+    font-size: 23px;
+}
+.human-score,.computer-score{
+    padding: 16px;
+    background-color: #3a290e;
+    border-radius: 8px;
+}
+.buttons{
+    padding: 16px;
+    margin: 8px;
+    margin-top: 45px;
+}
+#paper{
+    background-color: #33454f;
+}
+#scissors{
+    background-color: #f8c169;
+}
+.btn{
+    padding: 16px;
+    margin: 8px;
+    border-radius: 5px;
+    width: 136px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn img{
+    width: 70px;
+    height: 60px;
+}
+
+.score{
+    font-size: 23px;
+}
