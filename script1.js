@@ -62,16 +62,12 @@ let playRound = (cc, hc) => {
 };
 
 let decideWinner = (humanScore, computerScore) => {
-  if (humanScore === computerScore) {
-    console.log(
-      `This is a draw.Human score = ${humanScore} & Computer score = ${computerScore}`
-    );
-  }
-  if (humanScore > computerScore) {
+  if (humanScore === 5) {
     console.log(
       `human wins the game.Human score = ${humanScore} & Computer score = ${computerScore}`
     );
-  } else {
+  }
+  if (computerScore===5) {
     console.log(
       `computer wins the game.Human score = ${humanScore} & Computer score = ${computerScore}`
     );
@@ -84,6 +80,7 @@ document.getElementById("rock").addEventListener("click", () => {
   imgForInput(cc,hc)
   playRound(cc, hc);
   setScore(human,comp)
+  decideWinner(human,comp)
 });
 document.getElementById("paper").addEventListener("click", () => {
   const hc = "paper";
@@ -91,6 +88,7 @@ document.getElementById("paper").addEventListener("click", () => {
   imgForInput(cc,hc)
   playRound(cc, hc);
   setScore(human,comp)
+  decideWinner(human,comp)
 });
 document.getElementById("scissors").addEventListener("click", () => {
     const hc = "scissors";
@@ -98,6 +96,7 @@ document.getElementById("scissors").addEventListener("click", () => {
     imgForInput(cc,hc)
     playRound(cc, hc);
     setScore(human,comp)
+    decideWinner(human,comp)
   });
 
 
